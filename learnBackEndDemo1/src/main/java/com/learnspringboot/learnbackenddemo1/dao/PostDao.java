@@ -48,7 +48,7 @@ public interface PostDao {
      * @return
      */
     /**
-     * TODO: 改掉：Parameter 'userName' not found. Available parameters are [postEntity, id, param1, param2] bug
+     * @param postEntity 消息实体
      * @return
      */
     @Update("update demo1 set userName=#{userName}, postTime=#{postTime}, postContent=#{postContent}, postTitle=#{postTitle} where id=#{id}")
