@@ -27,7 +27,6 @@ public class User {
     private String country;
     private String province;
     private String city;
-    private String university;
     private Integer follow_count;
     private Integer fans_count;
     private Integer letter_unread;
@@ -37,7 +36,6 @@ public class User {
     private BigInteger artist_id;
     private Date create_time;
     private Date update_time;
-    private String uni_id;
 
     public BigInteger getId() {
         return id;
@@ -119,14 +117,6 @@ public class User {
         this.city = city;
     }
 
-    public String getUniversity() {
-        return university;
-    }
-
-    public void setUniversity(String university) {
-        this.university = university;
-    }
-
     public Integer getFollow_count() {
         return follow_count;
     }
@@ -197,14 +187,6 @@ public class User {
 
     public void setUpdate_time(Date update_time) {
         this.update_time = update_time;
-    }
-
-    public String getUni_id() {
-        return uni_id;
-    }
-
-    public void setUni_id(String uni_id) {
-        this.uni_id = uni_id;
     }
 
 }

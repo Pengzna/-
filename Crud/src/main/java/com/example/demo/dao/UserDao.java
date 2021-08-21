@@ -10,11 +10,48 @@ import java.util.List;
 @Mapper
 @Repository
 public interface UserDao {
-    /**
-     * TODO: insert方法字段改全，共21个
-     */
 
-    @Insert("insert into user(name,age,address) VALUES(#{name},#{age},#{address}) ")
+    /**
+     * 已改
+     * @param user
+     * @return
+     */
+    @Insert("insert into user(name," +
+            "gender," +
+            "avatar_url," +
+            "description," +
+            "mini_weixin_union_id," +
+            "mini_weixin_open_id," +
+            "country," +
+            "province," +
+            "city," +
+            "follow_count," +
+            "fans_count," +
+            "letter_unread," +
+            "comment_unread," +
+            "at_unread," +
+            "notification_unread," +
+            "artist_id," +
+            "create_time," +
+            "update_time)" +
+            " VALUES(#{name}," +
+            "#{gender}," +
+            "#{avatar_url}," +
+            "#{description}," +
+            "#{mini_weixin_union_id}," +
+            "#{mini_weixin_open_id}," +
+            "#{country}," +
+            "#{province}," +
+            "#{city}," +
+            "#{follow_count}," +
+            "#{fans_count}," +
+            "#{letter_unread}," +
+            "#{comment_unread}," +
+            "#{at_unread}," +
+            "#{notification_unread}," +
+            "#{artist_id}," +
+            "#{create_time}," +
+            "#{update_time}) ")
     int saveUser(User user);
 
     /**
@@ -26,10 +63,29 @@ public interface UserDao {
     int delUserByName(@Param("id") BigInteger id);
 
     /**
-     * TODO: update方法字段改全，共21个
-     * TIPS: where已改为主键id
+     * 已改
+     * @param user
+     * @return
      */
-    @Update("update user set age=#{age},address=#{address} where id =#{id}")
+    @Update("update user set name=#{name}," +
+            "gender=#{gender}," +
+            "avatar_url=#{avatar_url}," +
+            "description=#{description}," +
+            "mini_weixin_union_id=#{mini_weixin_union_id}," +
+            "mini_weixin_open_id=#{mini_weixin_open_id}," +
+            "country=#{country}," +
+            "province=#{province}," +
+            "city=#{city}," +
+            "follow_count=#{follow_count}," +
+            "fans_count=#{fans_count}," +
+            "letter_unread=#{letter_unread}," +
+            "comment_unread=#{comment_unread}," +
+            "at_unread=#{at_unread}," +
+            "notification_unread=#{notification_unread}," +
+            "artist_id=#{artist_id}," +
+            "create_time=#{create_time}," +
+            "update_time=#{update_time}" +
+            " where id =#{id}")
     int updateUser(User user);
 
     /**
