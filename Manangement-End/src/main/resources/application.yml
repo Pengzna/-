@@ -3,17 +3,17 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: wspjz123
-    url: jdbc:mysql://localhost:3306/x-admin?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
+    username: work1
+    password: 15325Uu!
+    url: jdbc:mysql://159.75.45.88:3306/umm?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
     type: com.alibaba.druid.pool.DruidDataSource
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-#  jpa:
-#    generate-ddl: false
-#    hibernate:
-#      ddl-auto: none
+  #  jpa:
+  #    generate-ddl: false
+  #    hibernate:
+  #      ddl-auto: none
   servlet:
     multipart:
       max-file-size: 100MB

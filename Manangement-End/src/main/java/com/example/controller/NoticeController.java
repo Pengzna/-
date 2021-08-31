@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/notice")
+@RequestMapping("/api/wxNotice")
 public class NoticeController {
     @Resource
     private NoticeService noticeService;
