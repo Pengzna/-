@@ -1,0 +1,303 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// {
+		// 	"path": "pages/index/index",
+		// 	"style": {
+		// 		"enablePullDownRefresh": true,
+		// 		"onReachBottomDistance": 60
+		// 	}
+		// }, 
+		{
+		    "path" : "pages/universityList/universityList",
+		    "style" :                                                                                    
+		    {
+				"navigationBarTitleText": "找墙墙φ(≧ω≦*)♪",
+		        "enablePullDownRefresh": true
+		    }
+		    
+		},
+
+
+		 {
+			"path": "pages/square/square",
+			"style": {
+				"navigationBarTitleText": "广场",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60
+				
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {}
+		},
+		{
+			"path": "pages/publishMoment/publishMoment",
+			"style": {}
+		}, {
+			"path": "pages/me/me",
+			"style": {
+				"navigationBarTitleText": "我"
+			}
+		}, {
+			"path": "pages/momentDetail/momentDetail",
+			"style": {
+				"navigationBarTitleText": "Ta的🍊"
+			}
+		}, {
+			"path": "pages/childrenComment/childrenComment",
+			"style": {}
+		}, {
+			"path": "pages/videoDetail/videoDetail",
+			"style": {}
+		}, {
+			"path": "pages/momentList/momentList",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60,
+				"navigationBarTitleText": "墙墙的小窝"
+				
+			}
+		}, {
+			"path": "pages/activityList/activityList",
+			"style": {
+				"navigationBarTitleText": "活动走你(☆▽☆)",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60
+			}
+		}, {
+			"path": "pages/friendList/friendList",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60
+			}
+		}, {
+			"path": "pages/videoList/videoList",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60
+			}
+		}, {
+			"path": "pages/settingList/settingList",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"navigationBarBackgroundColor": "#EDEDED"
+			}
+		}, {
+			"path": "pages/feedback/feedback",
+			"style": {
+				"navigationBarTitleText": "意见反馈"
+			}
+		}, {
+			"path": "pages/userInfo/userInfo",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"navigationBarBackgroundColor": "#EDEDED"
+			}
+		}, {
+			"path": "pages/cityList/cityList",
+			"style": {}
+		}, {
+			"path": "pages/topicList/topicList",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60
+			}
+		}, {
+			"path": "pages/notification/notification",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationBarTitleText": "通知",
+				"onReachBottomDistance": 60
+			}
+		}
+	    
+        ,{
+            "path" : "pages/editMoment/editMoment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationBarTitleText": "编辑",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/submitMoment/submitMoment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationBarTitleText": "提交页面",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/verify/verify",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationBarTitleText": "审核",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        
+        ,{
+            "path" : "pages/verifyPublish/verifyPublish",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/zdmomentDetail/zdmomentDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/publishzdMoment/publishzdMoment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/myMoment/myMoment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationBarTitleText": "我的投递",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        ,{
+            "path" : "pages/cityuniversityList/cityuniversityList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationBarTitleText": "选择学校",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        
+        ,{
+            "path" : "pages/certifiCat/certifiCat",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我认证,我骄傲",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        
+        ,{
+            "path" : "pages/editSubMoment/editSubMoment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "重新投递",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        ,{
+            "path" : "pages/webView/webView",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+			"path":"pages/activityDeliver/activityDeliver",
+			"style":
+			{
+				"navigationBarTitleText":"提交活动",
+				"enablePullDownRefresh":false
+			}
+		}
+        
+        ,{
+            "path" : "pages/eventUI/eventUI",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "墙",
+		"navigationBarBackgroundColor": "#F9F9F7",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#515151",
+		"borderStyle": "black",
+		"backgroundColor": "#F9F9F7",
+		"list": [
+			// {
+			// 	"pagePath": "pages/index/index",
+			// 	"text": "首页",
+			// 	"iconPath": "static/icon/tab_index.png",
+			// 	"selectedIconPath": "static/icon/tab_index_selected.png"
+			// },
+			{
+				"pagePath": "pages/square/square",
+				"text": "广场",
+				"iconPath": "static/icon/tab_square.png",
+				"selectedIconPath": "static/icon/tab_square_selected.png"
+			},
+			{
+				"pagePath": "pages/universityList/universityList",
+				"text": "发现",
+				"iconPath": "static/icon/tab_discover.png",
+				"selectedIconPath": "static/icon/tab_discover_selected.png"
+			},
+			{
+				"pagePath": "pages/me/me",
+				"text": "我的",
+				"iconPath": "static/icon/tab_me.png",
+				"selectedIconPath": "static/icon/tab_me_selected.png"
+			}
+		]
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			// {
+			// 	"name": "发布活动页", //模式名称
+			// 	"path": "pages/activityDeliver/activityDeliver", //启动页面，必选
+			// 	"query": "" //启动参数，在页面的onLoad函数里面得到
+			// },
+			{
+				"name":"universityList",
+				"path":"pages/universityList/universityList",
+				"query":""
+			},
+			{
+				"name":"UI",
+				"path":"pages/eventUI/eventUI",
+				"query":""
+			}
+		]
+	}
+}
