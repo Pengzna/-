@@ -78,6 +78,12 @@
 					</view>
 					<view>发动态</view>
 				</view>
+				<view class="popup-publish">
+					<view class="popup-publish-image-wrapper" @click="toPublishSubmit">
+						<image class="popup-publish-image-video" src="../../static/icon/sub-moment.png" mode="aspectFill"></image>
+					</view>
+					<view>提交动态</view>
+				</view>
 				<!-- 这里将提交动态改为发布活动，页面跳转至activityDeliver -->
 				<view class="popup-publish">
 					<view class="popup-publish-image-wrapper" @click="toPublishVideo">
@@ -352,7 +358,37 @@
 				// 	}
 				// })
 			},
+// 去提交给管理员发布
+			toPublishSubmit() {
+				// if(this.countInfo==null||this.countInfo.gender==-1){
+				// 	uni.clearStorage();
+				// 	uni.reLaunch({
+				// 		url: "/pages/login/login"
+				// 	});
+				// }
+				uni.navigateTo({
+					url: `../submitMoment/submitMoment?publishType=MOMENT`
+				});
+				// uni.chooseVideo({
+				// 	count: 1,
+				// 	compressed: false,
+				// 	sourceType: ['album'],
+				// 	success: (res) => {
+				// 		console.log(res);
+				// 		if (res.size > 1024 * 1024 * 1024) {
+				// 			uni.showToast({
+				// 				title: "视频最大为1G",
+				// 				duration: 2000
+				// 			});
+				// 			return;
+				// 		}
 
+				// 		uni.navigateTo({
+				// 			url: `../publishMoment/publishMoment?publishType=VIDEO&tempVideoPath=${res.tempFilePath}&videoOriginalTitle=${res.name}&videoWidth=${res.width}&videoHeight=${res.height}`
+				// 		});
+				// 	}
+				// })
+			},
 			updateMomentLikeCount(event, moment) {
 				moment.likeCount = event;
 			},

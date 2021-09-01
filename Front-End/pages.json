@@ -11,7 +11,7 @@
 		    "path" : "pages/universityList/universityList",
 		    "style" :                                                                                    
 		    {
-				"navigationBarTitleText": "找墙墙φ(≧ω≦*)♪",
+				"navigationBarTitleText": "信息平台",
 		        "enablePullDownRefresh": true
 		    }
 		    
@@ -21,7 +21,7 @@
 		 {
 			"path": "pages/square/square",
 			"style": {
-				"navigationBarTitleText": "广场",
+				"navigationBarTitleText": "交流广场",
 				"enablePullDownRefresh": true,
 				"onReachBottomDistance": 60
 				

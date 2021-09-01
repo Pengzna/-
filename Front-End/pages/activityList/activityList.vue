@@ -5,29 +5,39 @@
 		<view class="activity-item" v-for="(activity,index) in activityInfo.activityList" >
 		
 			<image class="activity-item-image" :src="activity.posterImage" mode="aspectFill" :data-image-index="index" @click.stop="previewImage(index)"></image>
+			
+			<view class="seperateLine">	</view>	
+			
 			<view class="activity-item-info" @click="toWeb(activity.sourceUrl)">
+				<!-- 活动名 -->
 				<view class="activity-item-name">
 					{{activity.name}}
 				</view>
+				<view class="activity-item-time-address" href="http://www.dclound.io/">
+					时间：
+				</view>
+				<view class="activity-item-time-address" href="http://www.dclound.io/">
+					{{activity.showStartTime}}
+				</view>
 				<view class="activity-item-time-address">
-					地址：{{activity.venueCity}} 
+					地点：{{activity.venueCity}} <!-- {{activity.venueName}} -->
 				</view>
 				<view class="activity-item-time-address" >
 					{{activity.venueName}}
-	
+					
 				</view>
 				
 				<view class="activity-item-time-addresss" >
-					参与:{{activity.venueAddress}}
+					点击了解详情{{activity.venueAddress}}
 					
 				</view>
-				<view class="activity-item-time-addresss2" >
+				<!-- <view class="activity-item-time-addresss2" >
 					价格：{{activity.sourceChannel}}
 					
-				</view>
-				<view class="activity-item-time-address" href="http://www.dclound.io/">
-					时间：{{activity.showStartTime}}
-				</view>
+				</view> --> 
+<!-- 				<image :src="collectIcon" mode="widthFix" style="width: 40rpx;margin: 0;position: relative;left: 280rpx;" @click="collect"></image>
+				 -->
+				 <!-- 报名按钮 -->
 				<view :class="activity.hasJoined ? 'activity-item-has-joined-true' : 'activity-item-has-joined-false' " @click.stop="joinedActivity(activity)">
 					{{activity.hasJoined ? '取消报名' : '报名'}}
 				</view>
@@ -106,6 +116,18 @@
 		},
 
 		methods: {
+			collect(){
+				if(this.isCollected == false)
+					{
+						this.isCollected = true
+						this.collectIcon = "../../static/icon/collect.png"
+					}
+				else
+					{
+						this.isCollected = false
+						this.collectIcon = "../../static/icon/collected.png"
+					}
+			},
 			toWeb(url){
 				
 				uni.navigateTo({
@@ -220,7 +242,12 @@
 				console.log(imgs)
 			}
 
-		}
+		},
+		computed:{
+			collectIcon(){
+				return (this.isCollected == false ? "../../static/icon/collect.png" : "../../static/icon/collected.png")
+			}
+		},
 	}
 </script>
 
@@ -230,39 +257,65 @@
 	}
 
 	.activity-item {
-		display: flex;
+		/* display: flex;
 		flex-direction: row;
-		margin-bottom: 76rpx;
-	}
+		margin-bottom: 76rpx; */
+		display: flex;
+		margin-top: 10rpx;
+		width: 96%;
+		margin-left: 2%;
+		height: 400rpx;
+		background-color: #FFFFFF;
+		border-radius: 15rpx;
+		box-shadow: 0px 2px 2px #cdcfcf;
+		}
+	
 
 	.activity-item-image {
-		width: 260rpx;
+		/* width: 260rpx;
 		height: 360rpx;
 		flex-shrink: 0;
 		margin-right: 30rpx;
-		border-radius: 6rpx;
+		border-radius: 6rpx; */
+		margin: 10rpx;
+		margin-bottom: 0;
+		margin-top: 15rpx;
+		margin-left: 20rpx;
+		width: 260rpx;
+		height: 360rpx;
+		border-radius: 10rpx;
 	}
 
 	.activity-item-info {
-		width: 370rpx;
-		position: relative;
-	}
+	width: 370rpx;
+	position: relative;
+		}
+	
 
 	.activity-item-name {
-		font-size: 34rpx;
+		/* font-size: 40rpx;
 		color: #090A0C;
 		margin-bottom: 20rpx;
 		max-height: 146rpx;
-		overflow: hidden;
+		overflow: hidden; */
+		font-size: large;
+		font-weight: 700;
+		display: block;
+		margin-bottom: 10rpx;
+		margin-top: 15rpx;
 	}
 
 	.activity-item-time-address {
-		height: 42rpx;
+		/* height: 42rpx;
 		font-size: 28rpx;
 		color: #ADAEAF;
 		white-space: nowrap;
 		overflow: hidden;
-		text-overflow: ellipsis;
+		text-overflow: ellipsis; */
+		display: block;
+		font-size: small;
+		margin-bottom: 10rpx;
+		color: #828282;
 	}
 .activity-item-time-addresss {
 		height: 42rpx;
@@ -283,12 +336,13 @@
 		}
 	.activity-item-has-joined-false {
 		position: absolute;
-		bottom: 0;
-		left: 0;
+		bottom: 21rpx;
+		left: 0rpx;
 
 		background-color: white;
 		color: #DA261B;
-		border: 2rpx solid #DA261B;
+		/* color: #000000; */
+		border: 1rpx solid #DA261B;
 
 		width: 118rpx;
 		height: 50rpx;
@@ -382,5 +436,14 @@
 	.popup-cancel:active,
 	.popup-confirm:active {
 		background-color: #f0f0f0;
+	}
+	.seperateLine{
+		padding:62px 6px 0px 6px;
+		margin-left: 6px;
+		margin-top: 5rpx;
+		border-left: 2px solid #d5d0ce;
+		font-size: 0;
+		height: 260rpx;
+		flex: 0.05;
 	}
 </style>

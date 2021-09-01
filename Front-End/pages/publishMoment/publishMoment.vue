@@ -451,11 +451,12 @@
 							// });
 						// }
 					//console.log(this.imageList.nv_length);
+					var indexdiff=1;
 						let param = {
 							momentType: this.momentType,
 							textContent: this.textContent,
 							status:1,
-							shareCount:this.index+1,
+							shareCount:parseInt(this.index)+parseInt("1"),
 						};
 						if (this.momentType === 'TEXT') {
 							// check

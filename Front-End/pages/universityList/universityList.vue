@@ -27,7 +27,7 @@
 			</view>-->
 		
 			<!-- 搜索框和背景图片 -->
-			<image src="../../static/fzz.png" class="picSize"></image>
+			<image src="https://p.pstatp.com/origin/pgc-image/fbbdded8e14842aa854872fdc205acfe" class="picSize"></image>
 			<!-- <uni-search-bar :radius="100" @confirm="search" @input="input" class="searchBar"></uni-search-bar> -->
 			<view class="box">
 			<view class="cu-bar search bg-white">
@@ -42,12 +42,12 @@
 			</view>
 			<!-- 标签框 -->
 <!-- 			<tabControl class="tab-control" :titles="['全部','文体','公益','讲座','招新','其他']"></tabControl> -->
-			
 			<scroll-view scroll-x class="bg-red nav text-center">
 				<view class="cu-item" :class="{active:index===TabCur}" v-for="(item,index) in titles" :key="index" @tap="tabSelect" :data-id="index">
 					{{titles[index]}}
 				</view>
 			</scroll-view>
+			
 			
 			<view class="lineee"></view>
 	<moment v-for="(moment) in momentInfo.momentList" :moment="moment" momentPageType="LIST" v-on:updateMomentLikeCount="updateMomentLikeCount($event,moment)"
@@ -311,7 +311,9 @@
 					pageSize: 7,
 					momentList: []
 				};
+				this.retrunInit(0);
 				await this.loadMomentInfo();
+				
 				uni.stopPullDownRefresh();
 			},
 
@@ -321,6 +323,9 @@
 			},
 		
 			methods: {
+				
+			
+				
 				//加载公告
 				async loadnotice(){
 					let [noticeInfoData] = await httpUtils.postJson("/user/getNoticeInfo", {
@@ -509,6 +514,11 @@
 					this.momentInfo.momentList=null;
 					await this.loadDifferMomentInfo();
 				},
+				 retrunInit(e) {//标签页跟着切换
+					this.TabCur = e;
+					this.index=e;
+					this.scrollLeft = (e) * 60;
+				},
 				InputFocus(e) {
 					this.InputBottom = e.detail.height
 				},
@@ -552,12 +562,10 @@
 	/* justify-content: space-between; */
 }
 .bg-white {
-	/* background-color: #ffffff; */
-	/* opacity: 0.7; */
 	color: #666666;
 }
 .cu-bar .search-form {
-	opacity: 0.7;
+	opacity: 0.525;
 	background-color: #f5f5f5;
 	line-height: 64upx;
 	height: 64upx;
@@ -575,7 +583,6 @@
 	content: "\e65c";
 }
 .cu-bar .action {
-	/* position: absolute; */
 	display: flex;
 	align-items: center;
 	height: 100%;
@@ -609,7 +616,6 @@
 	width: 100%;
 	top: 1;
 	z-index: 1024;
-	/* 下面是立体阴影 */
 	box-shadow: 0 1upx 6upx rgba(0, 0, 0, 0.1);
 }
 .cu-btn {
@@ -1048,6 +1054,7 @@
 	.activityList{
 	}
 	.active{
+		font-weight:600;
 		color:#FCCF67;
 		border-bottom: 8upx solid;
 	}

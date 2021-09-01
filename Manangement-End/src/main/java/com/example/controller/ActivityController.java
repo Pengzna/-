@@ -98,7 +98,7 @@ public class ActivityController {
             row.put("数据来源渠道（秀动：SHOWSTART）", obj.getSourceChannel());
             row.put("数据来源渠道-对象id", obj.getSourceId());
             row.put("来源url", obj.getSourceUrl());
-            row.put("线上活动", obj.getOnline());
+            row.put("审核通过", obj.getOnline());
             row.put("演出者id", obj.getArtistId());
             row.put("创建时间", obj.getCreateTime());
             row.put("更新时间", obj.getUpdateTime());
